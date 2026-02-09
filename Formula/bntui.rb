@@ -1,16 +1,16 @@
 class Bntui < Formula
   desc "Terminal block explorer for Blocknet privacy blockchain"
   homepage "https://github.com/obselate/bntui"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/obselate/bntui/releases/download/v#{version}/bntui-macos-aarch64"
-      sha256 "3af286bef431ca9ccfd16e5116b0e5d868a0bfb83828daf944f0ee2c327206fa"
+      sha256 "0cdb4c36e5c575a40cfb85925ad812fd35d1b9a19a4b00bb389ad8ed68f661ab"
     else
       url "https://github.com/obselate/bntui/releases/download/v#{version}/bntui-macos-x86_64"
-      sha256 "94045a9b004b21545254bb5b36ed25794efb6ff07a7763b53a5b8b91dd96740e"
+      sha256 "a8074f2822f9cf94b24fb18ab82bc778a6d9d626da81782664e22e91b0c18e40"
     end
   end
 
@@ -19,6 +19,6 @@ class Bntui < Formula
   end
 
   test do
-    assert_match "bntui", shell_output("#{bin}/bntui --version", 2)
+    assert_match "bntui", shell_output("#{bin}/bntui --version")
   end
 end
