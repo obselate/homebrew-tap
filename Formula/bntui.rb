@@ -1,16 +1,16 @@
 class Bntui < Formula
   desc "Terminal block explorer for Blocknet privacy blockchain"
   homepage "https://github.com/obselate/bntui"
-  version "0.1.1"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/obselate/bntui/releases/download/v#{version}/bntui-macos-aarch64"
-      sha256 "0cdb4c36e5c575a40cfb85925ad812fd35d1b9a19a4b00bb389ad8ed68f661ab"
+      sha256 "62d4f0893d87a522571c6896ad6c01e22c4c6d08544bca0a85ba45c5c291d839"
     else
       url "https://github.com/obselate/bntui/releases/download/v#{version}/bntui-macos-x86_64"
-      sha256 "a8074f2822f9cf94b24fb18ab82bc778a6d9d626da81782664e22e91b0c18e40"
+      sha256 "e9701bc1d8736a8fa21d76fd27e9b582391e2d37cff2147e64cdb8d36465ed75"
     end
   end
 
